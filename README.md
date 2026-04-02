@@ -39,10 +39,10 @@
 
 #Detailed Difficulty Mode Breakdown
 #｜Mode        |  Range Growth Factor        |  Lower Bound Reduction        |  Number of Chances Increases
-#｜Easy        |   ×1.2 + 5                  |      slow,random              |        Moderate, slow
-#｜Normal      |   ×1.5 + 10                 |        Gentle                 |            Moderate
-#｜Hard        |   ×2 + 15                   |        Rapid                  |        Relatively fast
-#｜Impossible  |   ×(2.5 + Level × 0.1)      |        Swift                  |             fast
+#｜Easy        |   ×1.2 + 5                  |      Slow,Random              |            Fast
+#｜Normal      |   ×1.5 + 10                 |        Gentle                 |        Relatively fast
+#｜Hard        |   ×2 + 15                   |        Rapid                  |           Moderate
+#｜Impossible  |   ×(2.5 + Level × 0.1)      |        Swift                  |        Moderate, slow
 #Note: "Attempts" (remaining chances) are recalculated at every level based on the current numerical range size and the current level. At higher #difficulty levels, although the numerical range expands exponentially, the number of attempts granted to you decreases correspondingly. 
 
 #V. Future #Improvements (Concepts)
