@@ -44,15 +44,8 @@
 #｜Hard        |   ×2 + 15                   |        Rapid                  |        Relatively fast
 #｜Impossible  |   ×(2.5 + Level × 0.1)      |        Swift                  |             fast
 #Note: "Attempts" (remaining chances) are recalculated at every level based on the current numerical range size and the current level. At higher #difficulty levels, although the numerical range expands exponentially, the number of attempts granted to you decreases correspondingly. V. Future #Improvements (Concepts)
-#Save the highest level reached to a file (i.e., a "High Score Record").
-
-#Add a colorized terminal interface (displaying green for correct guesses and red for incorrect ones).
-
-#Change the generation mechanism for "proximity hints" from a random algorithm to a deterministic one.
-
-#Refactor the code into smaller functional units and add type annotations.
-
-#Allow players to resume their previous game progress.
+#Run in graphical mode
+#Add more features
 
 #VI. Acknowledgments
 #The original concept and code for this project were created by me when I was "√196 years old."
