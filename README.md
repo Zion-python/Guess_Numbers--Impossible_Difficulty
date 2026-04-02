@@ -43,7 +43,9 @@
 #｜Normal      |   ×1.5 + 10                 |        Gentle                 |            Moderate
 #｜Hard        |   ×2 + 15                   |        Rapid                  |        Relatively fast
 #｜Impossible  |   ×(2.5 + Level × 0.1)      |        Swift                  |             fast
-#Note: "Attempts" (remaining chances) are recalculated at every level based on the current numerical range size and the current level. At higher #difficulty levels, although the numerical range expands exponentially, the number of attempts granted to you decreases correspondingly. V. Future #Improvements (Concepts)
+#Note: "Attempts" (remaining chances) are recalculated at every level based on the current numerical range size and the current level. At higher #difficulty levels, although the numerical range expands exponentially, the number of attempts granted to you decreases correspondingly. 
+
+#V. Future #Improvements (Concepts)
 #Run in graphical mode
 #Add more features
 
