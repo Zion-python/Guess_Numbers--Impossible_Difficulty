@@ -1,6 +1,10 @@
-#I created this when I was √196.:)
+#The file size is only about 11KB.😀
+
+#I created this when I was √196 years old.🧐
+
 #I know I didn't do a good job with this,:|
-#   --but you can make it better.:)
+#    --but you can do it better.:)
+
 #Share your work with your friends!;)
 
 import random
