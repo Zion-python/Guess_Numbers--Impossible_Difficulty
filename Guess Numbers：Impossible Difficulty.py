@@ -48,7 +48,7 @@ def play_game():
            "\n                    |3.Select the Appropriate Difficulty.             |"
            "\n                    |4.Lowest_number some time will be negative number|"
            "\n                    ---------------------Game Rules--------------------"
-           "\n\n       Welcome to my second Python program, which I created when I was  14  years old."
+           "\n\n       Welcome to my second Python program, which I created when I was  √196  years old."
            "\n\n                   Let's see how many times you can guess correctly."
            "\n                              The number well start from '0~99'"
            "\n\n                              For every correct guess--\n                              n increases by one digit."
@@ -57,7 +57,7 @@ def play_game():
            "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
     time.sleep(0.25)
     for i range(int(difficulty_mode)):    
-    chance = 14 - random.randint(2,3)
+        chance = 14 - random.randint(2,3)
     random_number = random.randint(lowest_number,highest_number)
     print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
     while chance != 0:
