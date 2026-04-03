@@ -58,7 +58,7 @@ def play_game():
     time.sleep(0.25)
     chance = 14 - random.randint(2,3) * int(difficulty_mode)
     random_number = random.randint(lowest_number,highest_number)
-    print ("\n                                        Level:",level,"\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                        Chance:",chance)
+    print ("\n                                         mode:",difficulty_mode,"\n                                        Level:",level,"\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                        Chance:",chance)
     while chance != 0:
         time.sleep(0.5)
         player_guess = input('\n\n                              Please set your Answer here: ')
