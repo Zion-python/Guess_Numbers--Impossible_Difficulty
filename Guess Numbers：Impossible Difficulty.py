@@ -88,9 +88,9 @@ def play_game():
                         difficulty_mode = "3"
                     elif difficulty_mode in ["Impossible", "impossible"]:
                         difficulty_mode = "4"
-                break
             chance = 14 - random.randint(2, 3) * int(difficulty_mode)
             random_number = random.randint(highest_number,lowest_number + 1)
+            continue
 
         try:
             guess = int(player_guess)
@@ -181,6 +181,6 @@ def play_game():
     print('Please rest your eyes for 10 minutes.')
     time.sleep(0.5)
     print('Bye~bye.:)')  # Bye:)
-    time.sleep(1)
+    time.sleep(3)
 
 play_game()
