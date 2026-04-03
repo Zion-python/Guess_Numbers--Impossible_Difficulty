@@ -1,80 +1,135 @@
-# The file size is only about 11KB.😀
+# Guess Numbers: Impossible Difficulty
 
-# The code is quite verbose,（I'm so Sorry😬） resulting in wasted space and unnecessary computational overhead.😓
+> The file size is only about 11KB. 😀  
+> The code is quite verbose (I'm so sorry 😬) – it wastes space and unnecessary computational overhead. 😓  
+> I do not possess extensive coding expertise.  
+> **The program is fully functional (tested). 😉**
 
-# I do not possess extensive coding expertise.
-# The program is fully functional (tested).😉
+---
 
+## Project Description
 
-
-# Project Description
-This is a number-guessing game featuring a system of progressively escalating difficulty.
+This is a number‑guessing game with **progressively escalating difficulty**.  
 I wrote the original version when I was 14 years old (√196 = 14).
-The game challenges players to guess a random number situated within an ever-expanding numerical range.
-With every correct guess, your level increases, the numerical range expands (sometimes even extending into negative numbers), and your remaining umber of attempts is dynamically adjusted.
 
+You guess a random number inside an **ever‑expanding numerical range**.  
+Each correct guess increases your **level**, expands the range (sometimes into negative numbers), and **recalculates your remaining chances**.
 
-# I. The game features four difficulty modes:
+> ⚠️ **Important**: The number of chances increases **slowly** – even on higher levels it is only theoretically sufficient.
 
-1. Easy
-2. Normal
-3. Hard
+---
+
+## I. Difficulty Modes
+
+1. Easy  
+2. Normal  
+3. Hard  
 4. Impossible
 
-Can you survive the "Impossible" mode?
+Can you survive the **Impossible** mode?
+
+---
+
+## II. Core Features
+
+- **Dynamic Difficulty** – Higher difficulty makes the range expand much faster.  
+- **Level‑based Chance Recalculation** – Remaining attempts are recomputed each level based on current range size and level.  
+- **Proximity Hints** – Tells you if your guess is very close, slightly high/low, or far off.  
+- **Random Encouraging Messages & Fun Trivia**  
+- **Loading Animation & Clear Game Rules**  
+- Type `exit` or `Exit` at any time to quit.
+
+---
+
+## III. How to Run (No PyCharm Needed)
+
+You only need **Python 3.6 or newer** – no extra IDE or packages.
+
+### 1. Install Python 3.6 from the official website
+
+- Go to [Python 3.6 archive](https://www.python.org/downloads/release/python-360/)  
+- Download the installer for your OS:  
+  - **Windows 64‑bit**: `Windows x86-64 executable installer`  
+  - **Windows 32‑bit**: `Windows x86 executable installer`  
+  - **macOS**: `macOS 64-bit installer`  
+  - **Linux**: use `sudo apt install python3.6` (or your distro's package manager)  
+- Run the installer – **IMPORTANT**: check **“Add Python 3.6 to PATH”**  
+- Click `Install Now`
+
+> ✅ `import time` and `import random` are **built‑in modules** – they work immediately after Python is installed.
+
+### 2. Verify installation
+
+Open a terminal (CMD, PowerShell, or bash) and type:
+
+    python --version
+
+You should see `Python 3.6.x` (or higher).
+
+### 3. Run the game
+
+- Save the game code as `guess_numbers.py`  
+- Open a terminal in that folder  
+- Run:
+
+    python guess_numbers.py
+
+That's it – enjoy!
+
+---
+
+## IV. Playing the Game
+
+Follow the on‑screen prompts to select a difficulty level, then start guessing.
+
+### Difficulty Mode Breakdown
+
+| Mode       | Range Growth Factor        | Lower Bound Reduction | Chances Increase Rate |
+|------------|----------------------------|----------------------|------------------------|
+| Easy       | ×1.2 + 5                   | Slow, random         | Small & fast           |
+| Normal     | ×1.5 + 10                  | Gentle               | Normal                 |
+| Hard       | ×2 + 15                    | Rapid                | Very slow              |
+| Impossible | ×(2.5 + Level × 0.1)       | Swift                | Extremely slow         |
+
+> 📉 **Note**: The number of chances you get **does not increase quickly** – especially on Hard and Impossible modes, the growth is deliberately slow. Each level recalculates chances based on current range size and level; higher difficulties give you fewer attempts relative to the explosion of the number range.
+
+---
+
+## V. Health & Sharing Tips
+
+- 👀 **Rest your eyes** – after playing, look away from the screen for a few minutes.  
+- ⏰ **Take breaks** – don't play for too long in one sitting.  
+- 📢 **Share with friends** – challenge them to beat your level!  
+- 🔧 **Modify freely** – you are allowed to change the code and turn it into your own original work.
+
+---
+
+## VI. Future Improvements (Ideas)
+
+- Graphical mode (GUI)  
+- Save high scores across sessions  
+- More balanced chance formulas  
+- Cleaner code structure
+
+---
+
+## VII. Acknowledgments
+
+The original concept and code were created by me when I was **“√196 years old”** (14).  
+
+Today, with the help of the open‑source community, this project continues to be maintained and improved.  
+Special thanks to **DeepSeek** for its rigorous review and suggestions – more than 80% of which were subsequently edited by me (so any remaining mistakes are entirely my own 😅).
+
+---
+
+## VIII. Modification Permissions
+
+**Permission is hereby granted to anyone to modify this program and to adapt it into their own original work.**  
+You are encouraged to share your improved version with your friends!
+
+---
+
+*Made with by a 14‑year‑old. Keep guessing, keep learning.
 
 
-# II. Core Features:
-Dynamic Difficulty — The higher the difficulty level, the faster the numerical range expands.
-
-Level-based Attempt Recalculation — Your remaining attempts are recalculated at every level (based on the size of the current numerical range and your current level).
-
-Proximity Hints — The game provides feedback indicating how close your guess is to the target number—whether it is extremely close, slightly too high/low, or far off.
-
-Random Encouraging Messages/Fun Trivia
-
-Loading Animations and Clear Game Rules
-
-Type "exit" or "Exit" at any time to quit the game.
-
-
-# III. How to Run:
-
-1. Ensure you have Python 3.6+ and PyCharm installed.
-2. Create a new text file and paste the code into it.
-3. Change the file extension to `.py`.
-4. Open the file using PyCharm.
-
-
-# IV. Playing the Game:
-
-Follow the on-screen prompts to select a difficulty level, then start guessing the number!
-
-Detailed Difficulty Mode Breakdown
-｜Mode        |  Range Growth Factor        |  Lower Bound Reduction        |  Number of Chances Increases
-｜Easy        |   ×1.2 + 5                  |      Slow,Random              |          Small Fast        |
-｜Normal      |   ×1.5 + 10                 |        Gentle                 |             Normal         |
-｜Hard        |   ×2 + 15                   |        Rapid                  |             So slow        |
-｜Impossible  |   ×(2.5 + Level × 0.1)      |        Swift                  |           Very slow        |
-
-The rate of increase in opportunities is slow (though theoretically sufficient).
-
-Note: "Attempts" (remaining chances) are recalculated at every level based on the current numerical range size and the current level. At higher difficulty levels, although the numerical range expands exponentially, the number of attempts granted to you decreases correspondingly. 
-
-
-# V. Future #Improvements (Concepts)
-
-Run in graphical mode
-Add more features
-
-
-# VI. Acknowledgments
-
-The original concept and code for this project were created by me when I was "√196 years old."
-Today, with the assistance of the open-source community, this project continues to be maintained and improved.
-Thanks to DeepSeek for its rigorous review and suggestions (80% or more of which were subsequently edited by me).
-
-
-# VII. Modification Permissions
-
-Permission is hereby granted to anyone to modify this program and to adapt it into their own original work.
+# This article was largely compiled and optimized by deepseek from the original version (which I wrote) and generated.
