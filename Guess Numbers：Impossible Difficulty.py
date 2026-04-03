@@ -88,8 +88,10 @@ def play_game():
                         difficulty_mode = "3"
                     elif difficulty_mode in ["Impossible", "impossible"]:
                         difficulty_mode = "4"
+              	    break
             chance = 14 - random.randint(2, 3) * int(difficulty_mode)
             random_number = random.randint(highest_number,lowest_number + 1)
+            player_guess = ""
             continue
 
         try:
