@@ -53,8 +53,8 @@ def play_game():
            "\n                              The number well start from '0~99(n)"
            "\n\n                              For every correct guess--\n                              n increases by one digit."
            "\n\n                                   Let's start!!!!)"
-           "\n                              If you want EXIT--\n                                             --Please input 'EXIT'"
-           "\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'")
+           "\n\n                              If you want EXIT--\n                                             --Please input 'EXIT'"
+           "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
     time.sleep(0.25)
     chance = 14 - random.randint(2,3) * int(difficulty_mode)
     random_number = random.randint(lowest_number,highest_number)
@@ -128,7 +128,7 @@ def play_game():
                 chance = max(random.randint(3,6), int(range_size ** 0.2) + level // 3)
 
             time.sleep(0.25)
-            print (random.choice(["\n                          Let's proceed to the next' guess....","\n                                       Level Up!"]))
+            print (random.choice(["\n                          Let's proceed to the next' guess....","\n                                        Level Up!"]))
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.25)
             print ("\n                                        Level: ",level,"\n                                Random Number: ",lowest_number,"~",highest_number)
