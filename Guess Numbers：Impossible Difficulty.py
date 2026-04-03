@@ -56,7 +56,7 @@ def play_game():
            "\n\n                              If you want EXIT--\n                                             --Please input 'EXIT'"
            "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
     time.sleep(0.25)
-    for i range(int(difficulty_mode)):    
+    for i in range(int(difficulty_mode)):    
         chance = 14 - random.randint(2,3)
     random_number = random.randint(lowest_number,highest_number)
     print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
