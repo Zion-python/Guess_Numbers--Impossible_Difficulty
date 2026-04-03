@@ -1,4 +1,4 @@
-#The file size is only about 12KB.😀
+#The file size is only about 11KB.😀
 
 #I created this when I was √196 years old.🧐
 
