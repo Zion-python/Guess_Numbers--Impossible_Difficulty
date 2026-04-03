@@ -58,7 +58,7 @@ def play_game():
     time.sleep(0.25)
     chance = 14 - random.randint(2,3) * int(difficulty_mode)
     random_number = random.randint(lowest_number,highest_number)
-    print ("\n                                         mode:",difficulty_mode,"\n                                        Level:",level,"\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                        Chance:",chance)
+    print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
     while chance != 0:
         time.sleep(0.5)
         player_guess = input('\n\n                              Please set your Answer here: ')
@@ -130,17 +130,21 @@ def play_game():
                 chance = max(random.randint(3,6), int(range_size ** 0.2) + level // 3)
 
             time.sleep(0.25)
-            print (random.choice(["\n                          Let's proceed to the next' guess....","\n                                        Level Up!"]))
-            random_number = int(random.randint(lowest_number, highest_number))
+            print ("\n<-----------------------------------Mode:",difficulty_mode," | Level:",level - 1," - Cleared------------------------->\n")
             time.sleep(0.25)
-            print ("\n                                        Level: ",level,"\n                                Random Number: ",lowest_number,"~",highest_number)
+            print (random.choice(["\n                          Let's proceed to the next' guess....","\n                                        Level Up!"]))
+            time.sleep(0.25)
+            print ("\n                                        Level: ",level - 1,"-->",level)
+            random_number = int(random.randint(lowest_number, highest_number))
+            time.sleep(0.5)
+            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number)
             continue
         else:
             if guess > random_number:
                 if guess - random_number <= int((highest_number + 1) * 0.05 / level + level * random.randint(0,5)):
-                    print (random.choice(["\n                         It's very Close.       (you guess)A little higher.","\n                             (you guess bigger)Very Close."]))
+                    print (random.choice(["\n                         It's very Close.       (you guess)A little higher.","\n                             (you guess higher)Very Close."]))
                 elif guess - random_number <= int((highest_number + 1) * 0.1 / level + level * random.randint(0,10)):
-                    print (random.choice(["\n                              Bit higher...        You guess Higher.","\n                                       (you guess bigger)Close...."]))
+                    print (random.choice(["\n                              Bit higher...        You guess higher.","\n                                       (you guess higher)Close...."]))
                 elif guess - random_number <= int((highest_number + 1) * 0.1):
                     print ("\n                         (you guess)Some higher?         (High for 0~",int((highest_number + 1) * 0.1),")")
                 else:
