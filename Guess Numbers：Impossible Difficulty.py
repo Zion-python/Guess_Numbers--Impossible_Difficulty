@@ -173,10 +173,10 @@ def play_game():
     time.sleep(0.5)
     print("\n\n<----------------------------------------Game Over---------------------------------------->\n\n")
     if difficulty_mode in ["4","Impossible","impossible"]:
-        if level != 1:
+        if level > 1:
             print("\nWait..")
             time.sleep(0.5)
-            print("You win Levels - ", level, "in the Impossible!?")
+            print("You win Levels - ", level - 1, "in the Impossible!?")
             time.sleep(0.5)
             print(random.choice(["Wow!", "So Good!"]))
     if level > 1:
