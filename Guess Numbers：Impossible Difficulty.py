@@ -1,4 +1,4 @@
-#The file size is only about 11KB.😀
+#The file size is only about 12KB.😀
 
 #I created this when I was √196 years old.🧐
 
@@ -88,7 +88,7 @@ def play_game():
                         difficulty_mode = "3"
                     elif difficulty_mode in ["Impossible", "impossible"]:
                         difficulty_mode = "4"
-              	    break
+                break
             chance = 14 - random.randint(2, 3) * int(difficulty_mode)
             random_number = random.randint(highest_number,lowest_number + 1)
             player_guess = ""
