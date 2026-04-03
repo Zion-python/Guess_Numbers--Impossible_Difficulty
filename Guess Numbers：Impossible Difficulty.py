@@ -156,9 +156,9 @@ def play_game():
         if chance < 1:
             break
         if chance >= level * 3:
-            print ("\n                                    You have",chance,"chance.")
+            print ("\n                                    You have",chance,"chance left.")
         else:
-            print ("\n                                   You only have",chance,"chance.")
+            print ("\n                                   You only have",chance,"chance left.")
     if exit_game in ["no", "No"]:
         time.sleep(0.25)
         print("\n                                          Ohh,no!")
