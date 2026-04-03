@@ -1,3 +1,5 @@
+# The file size is 10 KB.😀
+
 # The code is quite verbose, resulting in wasted space and unnecessary computational overhead.😓
 # I apologize;，I do not possess extensive coding expertise.😥
 # The program is fully functional (tested).😉
