@@ -186,7 +186,7 @@ def play_game():
     time.sleep(0.5)
     print('Please rest your eyes for 10 minutes.')
     time.sleep(0.5)
-    print('Bye~bye.:)')  # Bye:)
+    print('Bye~bye.: )')  # Bye: )
     time.sleep(3)
 
 play_game()
