@@ -137,7 +137,7 @@ def play_game():
             print ("\n                                        Level: ",level - 1,"-->",level)
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.5)
-            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number)
+            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
             continue
         else:
             if guess > random_number:
