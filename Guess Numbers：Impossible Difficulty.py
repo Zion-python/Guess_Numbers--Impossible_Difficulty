@@ -57,7 +57,7 @@ def play_game():
            "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
     time.sleep(0.25)
     for i in range(int(difficulty_mode)):    
-        chance = 14 - random.randint(3,5)
+        chance = 14 - random.randint(2,3)
     random_number = random.randint(lowest_number,highest_number)
     print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
     while chance != 0:
@@ -91,7 +91,7 @@ def play_game():
                         difficulty_mode = "4"
                 break
             for i in range(int(difficulty_mode)):    
-                chance = 14 - random.randint(3,5)
+                chance = 14 - random.randint(2,3)
             random_number = random.randint(highest_number,lowest_number + 1)
             player_guess = ""
             continue
@@ -123,13 +123,13 @@ def play_game():
                 highest_number = int(highest_number * 2.0 + 15)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.10)))
                 range_size = highest_number - lowest_number + 1
-                chance += max(random.randint(3,6), int(range_size ** 0.25) + level // 2)
+                chance += max(random.randint(3,5), int(range_size ** 0.25) + level // 2)
 
             else:
                 highest_number = int(highest_number * (2.5 + level * 0.1))
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.20)))
                 range_size = highest_number - lowest_number + 1
-                chance += max(random.randint(2,5), int(range_size ** 0.2) + level // 3)
+                chance += max(random.randint(2,3), int(range_size ** 0.2) + level // 3)
 
             time.sleep(0.25)
             print ("\n<-----------------------------------Mode:",difficulty_mode," | Level:",level - 1," - Cleared------------------------->\n")
