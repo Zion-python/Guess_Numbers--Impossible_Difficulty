@@ -107,30 +107,27 @@ def play_game():
         if guess == random_number:
             print (random.choice(["\n                            High five!👋 Your guess is Right!","                                    Your guess is Right.","                                   Celebrate For You!"]))
             level += 1
+            chance_last = chance
             if difficulty_mode == "1":
                 highest_number = int(highest_number * 1.2 + 5)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.02)))
                 range_size = highest_number - lowest_number + 1
-                chance += max(random.randint(3,5), int(range_size ** 0.35) + level)
-
+                chance_plus += max(random.randint(3,5), int(range_size ** 0.35) + level)
             elif difficulty_mode == "2":
                 highest_number = int(highest_number * 1.5 + 10)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.05)))
                 range_size = highest_number - lowest_number + 1
                 chance += max(random.randint(3,4), int(range_size ** 0.3) + level)
-
             elif difficulty_mode == "3":
                 highest_number = int(highest_number * 2.0 + 15)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.10)))
                 range_size = highest_number - lowest_number + 1
                 chance += max(random.randint(2,3), int(range_size ** 0.25) + level // 2)
-
             else:
                 highest_number = int(highest_number * (2.5 + level * 0.1))
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.20)))
                 range_size = highest_number - lowest_number + 1
-                chance += max(random.randint(1,2), int(range_size ** 0.2) + level // 3)
-
+                chance = max(random.randint(1,2), int(range_size ** 0.2) + level // 3)
             time.sleep(0.25)
             print ("\n<-----------------------------------Mode:",difficulty_mode," | Level:",level - 1," - Cleared------------------------->\n")
             time.sleep(0.25)
@@ -139,7 +136,7 @@ def play_game():
             print ("\n                                        Level: ",level - 1,"-->",level)
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.5)
-            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance += ",chance)
+            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance_last,"-->",chance,"\n                                       Chance:",chance)
             continue
         else:
             if guess > random_number:
