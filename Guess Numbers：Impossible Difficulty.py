@@ -148,7 +148,7 @@ def play_game():
                 elif guess - random_number <= int((highest_number + 1) * 0.1 / level + level * random.randint(0,10)):
                     print (random.choice(["\n                            Bit higher...        Your guess is higher.","\n                                     (your guess is higher)Close...."]))
                 elif guess - random_number <= int((highest_number + 1) * 0.1):
-                    print ("\n                         (you guess)Some higher?         (High for 0~",int((highest_number + 1) * 0.1),")")
+                    print ("\n                         (your guess)Some higher?         (High for 0~",int((highest_number + 1) * 0.1),")")
                 else:
                     print(random.choice(["\n                                  Your guess is higher.","\n                                  Your guess is not lower."]))
             elif guess < random_number:
