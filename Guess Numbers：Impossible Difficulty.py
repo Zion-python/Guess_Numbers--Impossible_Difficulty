@@ -19,15 +19,9 @@ def play_game():
         difficulty_mode = input("Which code do you want?\n1.Easy;\n2.Normal;\n3.Difficult;\n4.Impossible.\n: ")
         if difficulty_mode not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
             print (random.choice(["Sorry,I can't understand.😓\nPlease input again.","???😦"]))
+            continue
         else:
-            if difficulty_mode in ["Easy", "easy"]:
-                difficulty_mode = "1"
-            elif difficulty_mode in ["Normal", "normal"]:
-                difficulty_mode = "2"
-            elif difficulty_mode in ["Difficult","difficult"]:
-                difficulty_mode = "3"
-            elif difficulty_mode in ["Impossible","impossible"]:
-                difficulty_mode = "4"
+            difficulty_convert_to_int()
         break
     print ("\n\n<----------------------------------------Game Start---------------------------------------->\n\n                                  ---------loading--------")
     time.sleep(0.5)
@@ -56,10 +50,12 @@ def play_game():
            "\n\n                              If you want EXIT--\n                                             --Please input 'EXIT'"
            "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
     time.sleep(0.25)
-    for i in range(int(difficulty_mode)):    
-        chance = 14 - random.randint(2,3)
+    chances = []
+    for i in range(difficulty_mode):
+        chance = 14 - random.randint(2,3) * difficulty_mode
+        chances.append(chance)
     random_number = random.randint(lowest_number,highest_number)
-    print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
+    print ("\n\n<-----------------------------------Mode:",difficulty_print," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
     while chance != 0:
         time.sleep(0.5)
         player_guess = input('\n\n                              Please set your Answer here: ')
@@ -80,22 +76,15 @@ def play_game():
                 if difficulty_mode not in ["1", "Easy", "easy", "2", "Normal", "normal", "3", "Difficult", "difficult",
                                            "4", "Impossible", "impossible"]:
                     print(random.choice(["Sorry,I can't understand.😓\nPlease input again.", "???😦"]))
+                    continue
                 else:
-                    if difficulty_mode in ["Easy", "easy"]:
-                        difficulty_mode = "1"
-                    elif difficulty_mode in ["Normal", "normal"]:
-                        difficulty_mode = "2"
-                    elif difficulty_mode in ["Difficult", "difficult"]:
-                        difficulty_mode = "3"
-                    elif difficulty_mode in ["Impossible", "impossible"]:
-                        difficulty_mode = "4"
+                    difficulty_convert_to_int()
                 break
-            for i in range(int(difficulty_mode)):    
-                chance = 14 - random.randint(2,3)
-            random_number = random.randint(highest_number,lowest_number + 1)
-            player_guess = ""
-            continue
-
+                chances = []
+                for i in range(difficulty_mode):
+                    chance = 14 - random.randint(2,3) * difficulty_mode
+                    chances.append(chance)
+            random_number = random.randint(lowest_number,highest_number)
         try:
             guess = int(player_guess)
         except ValueError:
@@ -108,17 +97,17 @@ def play_game():
             print (random.choice(["\n                            High five!👋 Your guess is Right!","                                    Your guess is Right.","                                   Celebrate For You!"]))
             level += 1
             chance_last = chance
-            if difficulty_mode == "1":
+            if difficulty_mode == 1:
                 highest_number = int(highest_number * 1.2 + 5)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.02)))
                 range_size = highest_number - lowest_number + 1
                 chance_plus += max(random.randint(3,5), int(range_size ** 0.35) + level)
-            elif difficulty_mode == "2":
+            elif difficulty_mode == 2:
                 highest_number = int(highest_number * 1.5 + 10)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.05)))
                 range_size = highest_number - lowest_number + 1
                 chance += max(random.randint(3,4), int(range_size ** 0.3) + level)
-            elif difficulty_mode == "3":
+            elif difficulty_mode == 3:
                 highest_number = int(highest_number * 2.0 + 15)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.10)))
                 range_size = highest_number - lowest_number + 1
@@ -136,7 +125,15 @@ def play_game():
             print ("\n                                        Level: ",level - 1,"-->",level)
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.5)
-            print ("\n\n<-----------------------------------Mode:",difficulty_mode," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance_last,"-->",chance,"\n                                       Chance:",chance)
+        if difficulty_mode == 1:
+            difficulty_print = "Easy"
+        elif difficulty_mode == 2:
+            difficulty_print = "Normal"
+        elif difficulty_mode == 3:
+            difficulty_print = "Difficult"
+        elif difficulty_mode == 4:
+            difficulty_print = "Impossible"
+            print ("\n\n<-----------------------------------Mode:",difficulty_print," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance_last,"-->",chance,"\n                                       Chance:",chance)
             continue
         else:
             if guess > random_number:
@@ -171,7 +168,7 @@ def play_game():
         print("\n                                       Chance over!")
     time.sleep(0.5)
     print("\n\n<----------------------------------------Game Over---------------------------------------->\n\n")
-    if difficulty_mode in ["4","Impossible","impossible"]:
+    if difficulty_mode == 4:
         if level > 1:
             print("\nWait..")
             time.sleep(0.5)
@@ -187,5 +184,27 @@ def play_game():
     time.sleep(0.5)
     print('Bye~bye.: )')  # Bye: )
     time.sleep(3)
+
+def difficulty_print():
+        if difficulty_mode == 1:
+            difficulty_print = "Easy"
+        elif difficulty_mode == 2:
+            difficulty_print = "Normal"
+        elif difficulty_mode == 3:
+            difficulty_print = "Difficult"
+        elif difficulty_mode == 4:
+            difficulty_print = "Impossible"
+
+def difficulty_convert_to_int():
+    if difficulty_mode in ["Easy", "easy"]:
+         difficulty_mode = 1
+    elif difficulty_mode in ["Normal", "normal"]:
+        difficulty_mode = 2
+    elif difficulty_mode in ["Difficult","difficult"]:
+        difficulty_mode = 3
+    elif difficulty_mode in ["Impossible","impossible"]:
+        difficulty_mode = 4
+    difficulty_mode = int(difficulty_mode)
+    difficulty_print()
 
 play_game()
