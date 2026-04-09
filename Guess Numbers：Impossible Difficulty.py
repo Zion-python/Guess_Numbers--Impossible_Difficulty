@@ -60,7 +60,7 @@ def play_game():
              ," " * (87 - int((len("|1.You need to input right number;                          |") / 2))),"|1.You need to input right number;                          |\n"
              ," " * (87 - int((len("|2.You'd better not make any input errors;                  |") / 2))),"|2.You'd better not make any input errors;                  |\n"
              ," " * (87 - int((len("|3.Select the Appropriate Difficulty;                       |") / 2))),"|3.Select the Appropriate Difficulty;                       |\n"
-             ," " * (88 - int((len("|4.Lowest_number some time will be negative number.          |") / 2))),"|4.Lowest_number some time will be negative number.          |\n"
+             ," " * (88 - int((len("|4.Lowest_number some time will be negative number.          |") / 2))),"|4.Lowest_number some time will be negative number.         |\n"
              ," " * (88 - int((len("-------------------------Game Rules--------------------------") / 2))),"-------------------------Game Rules--------------------------\n\n"
              ," " * (86 - int((len("Welcome to my second Python program, which I created when I was  √196  years old.") / 2))),"Welcome to my second Python program, which I created when I was  √196  years old.\n\n"
              ," " * (86 - int((len("Let's see how many times you can guess correctly.") / 2))),"Let's see how many times you can guess correctly.\n\n"
