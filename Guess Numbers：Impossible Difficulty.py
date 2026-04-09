@@ -22,7 +22,7 @@ def play_game():
                  ," " * (75 - int((len("3.Difficult.") / 2))),"|    3.Difficult.","|    4.Impossible.|\n\n"
                  ," " * (87 - int((len("Which code do you want?:" ) / 2))),end="")
         difficulty_mode = input("Which code do you want?: ")
-        if difficulty_mode not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
+        if str(difficulty_mode) not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
             r = random.randint(1,2)
             if r == 1:
                 print ("\n"," " * (87 - int((len("Sorry,I can't understand. Please input again.") / 2))),"Sorry,I can't understand. Please input again.")
@@ -182,7 +182,7 @@ def play_game():
             else:
                 print ("\n"," " * (87 - int((len("Level Up!") / 2))),"Level Up!")
             time.sleep(0.25)
-            print ("\n"," " * (90 - int((len("Level:") / 2))),"Level: ",level - 1,"-->",level)
+            print ("\n"," " * (85 - int((len("Level:") / 2))),"Level: ",level - 1,"-->",level)
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.5)
             if difficulty_mode == 1:
