@@ -1,4 +1,4 @@
-#The file size is only about 12KB.😀
+#The file size is only about 17.9KB.😀
 
 #I created this when I was √196 years old.🧐
 
@@ -13,95 +13,151 @@ import time
 def play_game():
     exit_game = "no"
     level = 1
+    chance = 14
     highest_number = 99
     lowest_number = 0
+    chance_last = chance
     while True:
-        difficulty_mode = input("Which code do you want?\n1.Easy;\n2.Normal;\n3.Difficult;\n4.Impossible.\n: ")
+        print (" " * (73 - int((len("1.Easy.") / 2))),"|    1.Easy.","     |    2.Normal.    |\n\n"
+                 ," " * (75 - int((len("3.Difficult.") / 2))),"|    3.Difficult.","|    4.Impossible.|\n\n"
+                 ," " * (87 - int((len("Which code do you want?:" ) / 2))),end="")
+        difficulty_mode = input("Which code do you want?: ")
         if difficulty_mode not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
-            print (random.choice(["Sorry,I can't understand.😓\nPlease input again.","???😦"]))
+            r = random.randint(1,2)
+            if r == 1:
+                print ("\n"," " * (87 - int((len("Sorry,I can't understand. Please input again.") / 2))),"Sorry,I can't understand. Please input again.")
+            else:
+                print ("\n"," " * (87 - int((len("???") / 2))),"???")
             continue
         else:
-            difficulty_convert_to_int()
+            if difficulty_mode in ["1", "Easy", "easy"]:
+                difficulty_mode = 1
+                difficulty_print = "Easy"
+            elif difficulty_mode in ["2", "Normal", "normal"]:
+                difficulty_mode = 2
+                difficulty_print = "Normal"
+            elif difficulty_mode in ["3", "Difficult", "difficult"]:
+                difficulty_mode = 3
+                difficulty_print = "Difficult"
+            elif difficulty_mode in ["4", "Impossible", "impossible"]:
+                difficulty_mode = 4
+                difficulty_print = "Impossible"
         break
-    print ("\n\n<----------------------------------------Game Start---------------------------------------->\n\n                                  ---------loading--------")
+    print ("\n\n<","-" * (87 - int((len("Game Start") / 2))),"Game Start","-" * (89 - int((len("Game Start") / 2))),">\n\n"," " * (87 - int((len("---------loading---------") / 2))),"---------loading---------\n")
     time.sleep(0.5)
-    print ("                                  |loading>            0%|")
+    print (" " * (87 - int((len("|loading>            0%|") / 2))),"|loading>            0%|\n")
     time.sleep(0.1)
-    print ("                                  |loading..>         25%|")
+    print (" " * (87 - int((len("|loading..>         25%|") / 2))),"|loading..>         25%|\n")
     time.sleep(0.1)
-    print ("                                  |loading.....>      50%|")
+    print (" " * (87 - int((len("|loading.....>      50%|") / 2))),"|loading.....>      50%|\n")
     time.sleep(0.1)
-    print ("                                  |loading.......>    75%|")
+    print (" " * (87 - int((len("|loading.......>    75%|") / 2))),"|loading.......>    75%|\n")
     time.sleep(0.1)
-    print ("                                  |loading..........>100%|")
-    print ("                                  ------loading over------")
+    print (" " * (87 - int((len("|loading..........>100%|") / 2))),"|loading..........>100%|\n")
+    print (" " * (87 - int((len("------loading over-------") / 2))),"------loading over-------\n")
     time.sleep(0.1)
-    print ("\n                    ---------------------Game Rules--------------------"
-           "\n                    |1.You need to input right number;                |"
-           "\n                    |2.You'd better not make any input errors;        |"
-           "\n                    |3.Select the Appropriate Difficulty.             |"
-           "\n                    |4.Lowest_number some time will be negative number|"
-           "\n                    ---------------------Game Rules--------------------"
-           "\n\n       Welcome to my second Python program, which I created when I was  √196  years old."
-           "\n\n                   Let's see how many times you can guess correctly."
-           "\n                              The number well start from '0~99'"
-           "\n\n                              For every correct guess--\n                              n increases by one digit."
-           "\n\n                                   Let's start!!!!)"
-           "\n\n                              If you want EXIT--\n                                             --Please input 'EXIT'"
-           "\n\n                  And if you want Change Mode--\n                                             --Please input 'Change mode'\n")
+    print (" " * (88 - int((len("--------------------------Game Rules-------------------------") / 2))),"--------------------------Game Rules-------------------------\n"
+             ," " * (87 - int((len("|1.You need to input right number;                          |") / 2))),"|1.You need to input right number;                          |\n"
+             ," " * (87 - int((len("|2.You'd better not make any input errors;                  |") / 2))),"|2.You'd better not make any input errors;                  |\n"
+             ," " * (87 - int((len("|3.Select the Appropriate Difficulty;                       |") / 2))),"|3.Select the Appropriate Difficulty;                       |\n"
+             ," " * (88 - int((len("|4.Lowest_number some time will be negative number.          |") / 2))),"|4.Lowest_number some time will be negative number.          |\n"
+             ," " * (88 - int((len("-------------------------Game Rules--------------------------") / 2))),"-------------------------Game Rules--------------------------\n\n"
+             ," " * (86 - int((len("Welcome to my second Python program, which I created when I was  √196  years old.") / 2))),"Welcome to my second Python program, which I created when I was  √196  years old.\n\n"
+             ," " * (86 - int((len("Let's see how many times you can guess correctly.") / 2))),"Let's see how many times you can guess correctly.\n\n"
+             ," " * (86 - int((len("The number well start from '0~99'.") / 2))),"The number well start from '0~99'.\n"
+             ," " * (75 - int((len("For every correct guess--") / 2))),"For every correct guess--\n"," " * (111 - int((len("--The (H/L) Number well change higher and lower.") / 2))),"--The (H/L) Number well change higher and lower.\n\n"
+             ," " * (89 - int((len("Let's start!!!") / 2))),"Let's start!!!\n\n"
+             ," " * (79 - int((len("If you want EXIT--") / 2))),"If you want EXIT--\n"," " * (97 - int((len("--Please input 'EXIT'.") / 2))),"--Please input 'EXIT'.\n\n"
+             ," " * (73 - int((len("And if you want Change Mode--") / 2))),"And if you want Change Mode--\n"," " * (101 - int((len("--Please input 'Change mode.'") / 2))),"--Please input 'Change mode.'\n\n\n")
     time.sleep(0.25)
-    chances = []
     for i in range(difficulty_mode):
-        chance = 14 - random.randint(2,3) * difficulty_mode
-        chances.append(chance)
+        chance -= random.randint(2,3)
     random_number = random.randint(lowest_number,highest_number)
-    print ("\n\n<-----------------------------------Mode:",difficulty_print," | Level:",level,"----------------------------------->","\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance)
+    print ("\n\n<","-" * int(77 - (len(difficulty_print))),"Mode -",difficulty_print
+           ," | Level -",level,"-" * int(83 - (len(difficulty_print))),">\n"
+           ," " * (81 - int((len("Random Number: ") / 2))),"Random Number: ",lowest_number,"~",highest_number,"\n"
+           ," " * (84 - int((len("Chance:") / 2))),"Chance: ",chance)
     while chance != 0:
         time.sleep(0.5)
-        player_guess = input('\n\n                              Please set your Answer here: ')
+        print ("\n\n"," " * (87 - int((len("Please set your Answer here: ") / 2))),end="")
+        player_guess = input("Please set your Answer here: ")
         if player_guess.lower() == "exit":
-            exit_game = input("\n           Do you want exit?: ")
+            print ("\n"," " * (87 - int((len("Do you want exit?: ") / 2))),end="")
+            exit_game = input("Do you want exit?: ")
             if exit_game.lower() == "yes":
                 break
             else:
-                print (random.choice(["                      Maybe you input wrong.","You don't Quit?  So...    Let's continue!"]))
+                random_choice = random.randint(1,2)
+                if random_choice == 1:
+                    print ("\n"," " * (87 - int((len("Maybe you input wrong.") / 2))),"Maybe you input wrong.")
+                else:
+                    print ("\n"," " * (87 - int((len("Let's continue.") / 2))),"Let's continue.")
                 exit_game = "no"
                 continue
         if player_guess.lower() == "change mode":
+            exit_game = "no"
             level = 1
+            chance = 14
             highest_number = 99
             lowest_number = 0
             while True:
-                difficulty_mode = input("Which code do you want?\n1.Easy;\n2.Normal;\n3.Difficult;\n4.Impossible.\n: ")
-                if difficulty_mode not in ["1", "Easy", "easy", "2", "Normal", "normal", "3", "Difficult", "difficult",
-                                           "4", "Impossible", "impossible"]:
-                    print(random.choice(["Sorry,I can't understand.😓\nPlease input again.", "???😦"]))
+                print (" " * (73 - int((len("1.Easy.") / 2))),"|    1.Easy.","     |    2.Normal.    |\n\n"
+                         ," " * (75 - int((len("3.Difficult.") / 2))),"|    3.Difficult.","|    4.Impossible.|\n\n"
+                         ," " * (87 - int((len("Which code do you want?:" ) / 2))),end="")
+                difficulty_mode = input("Which code do you want?: ")
+                if difficulty_mode not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
+                    random_choice = random.randint(1,2)
+                    if random_choice == 1:
+                        print ("\n"," " * (87 - int((len("Sorry,I can't understand. Please input again.") / 2))),"Sorry,I can't understand. Please input again.")
+                    else:
+                        print ("\n"," " * (87 - int((len("???") / 2))),"???")
                     continue
                 else:
-                    difficulty_convert_to_int()
+                    if difficulty_mode in ["1", "Easy", "easy"]:
+                        difficulty_mode = 1
+                        difficulty_print = "Easy"
+                    elif difficulty_mode in ["2", "Normal", "normal"]:
+                        difficulty_mode = 2
+                        difficulty_print = "Normal"
+                    elif difficulty_mode in ["3", "Difficult", "difficult"]:
+                        difficulty_mode = 3
+                        difficulty_print = "Difficult"
+                    elif difficulty_mode in ["4", "Impossible", "impossible"]:
+                        difficulty_mode = 4
+                        difficulty_print = "Impossible"
                 break
-                chances = []
-                for i in range(difficulty_mode):
-                    chance = 14 - random.randint(2,3) * difficulty_mode
-                    chances.append(chance)
+            for i in range(difficulty_mode):
+                chance -= random.randint(2,3)
             random_number = random.randint(lowest_number,highest_number)
         try:
             guess = int(player_guess)
         except ValueError:
-            print(random.choice(["\n                                  Sorry-What did you say?","\n                            I can't understand..    Please say again.","\n                                    ???    What's this?"]))
+            random_choice = random.randint(1,3)
+            if random_choice == 1:
+                print ("\n"," " * (87 - int((len("Sorry-What did you say?") / 2))),"Sorry-What did you say?")
+            elif random_choice == 2:
+                print ("\n"," " * (87 - int((len("What's this???") / 2))),"What's this???")
+            else:
+                print ("\n"," " * (87 - int((len("???") / 2))),"???")
             continue
         if guess > highest_number or guess < lowest_number:
-            print ("\n                                  Outside the random range!!")
+            print ("\n"," " * (87 - int((len("Outside the random range!!") / 2))),"Outside the random range!!")
             continue
         if guess == random_number:
-            print (random.choice(["\n                            High five!👋 Your guess is Right!","                                    Your guess is Right.","                                   Celebrate For You!"]))
+            random_choice = random.randint(1,3)
+            if random_choice == 1:
+                print ("\n"," " * (87 - int((len("High five!👋 Your guess is Right!") / 2))),"High five! Your guess is Right!")
+            elif random_choice == 2:
+                print ("\n"," " * (87 - int((len("Your guess is Right!!!") / 2))),"You get This answer!!!")
+            else:
+                print ("\n"," " * (87 - int((len("Celebrate For You!") / 2))),"Celebrate For You!")
             level += 1
             chance_last = chance
             if difficulty_mode == 1:
                 highest_number = int(highest_number * 1.2 + 5)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.02)))
                 range_size = highest_number - lowest_number + 1
-                chance_plus += max(random.randint(3,5), int(range_size ** 0.35) + level)
+                chance += max(random.randint(3,5), int(range_size ** 0.35) + level)
             elif difficulty_mode == 2:
                 highest_number = int(highest_number * 1.5 + 10)
                 lowest_number = lowest_number - random.randint(0, max(1, int(highest_number * 0.05)))
@@ -118,93 +174,105 @@ def play_game():
                 range_size = highest_number - lowest_number + 1
                 chance = max(random.randint(1,2), int(range_size ** 0.2) + level // 3)
             time.sleep(0.25)
-            print ("\n<-----------------------------------Mode:",difficulty_mode," | Level:",level - 1," - Cleared------------------------->\n")
+            print ("\n\n<","-" * int(77 - (len(difficulty_print))),"Mode:",difficulty_print," | Level:",level - 1," - Cleared","-" * int(72 - (len(difficulty_print))),">\n")
             time.sleep(0.25)
-            print (random.choice(["\n                          Let's proceed to the next' guess....","\n                                        Level Up!"]))
+            random_choice = random.randint(0,1)
+            if random_choice == 0:
+                print ("\n"," " * (87 - int((len("Let's proceed to the next' guess....") / 2))),"Let's proceed to the next' guess....")
+            else:
+                print ("\n"," " * (87 - int((len("Level Up!") / 2))),"Level Up!")
             time.sleep(0.25)
-            print ("\n                                        Level: ",level - 1,"-->",level)
+            print ("\n"," " * (90 - int((len("Level:") / 2))),"Level: ",level - 1,"-->",level)
             random_number = int(random.randint(lowest_number, highest_number))
             time.sleep(0.5)
-        if difficulty_mode == 1:
-            difficulty_print = "Easy"
-        elif difficulty_mode == 2:
-            difficulty_print = "Normal"
-        elif difficulty_mode == 3:
-            difficulty_print = "Difficult"
-        elif difficulty_mode == 4:
-            difficulty_print = "Impossible"
-            print ("\n\n<-----------------------------------Mode:",difficulty_print," | Level:",level,"----------------------------------->""\n                                Random Number: ",lowest_number,"~",highest_number,"\n                                       Chance:",chance_last,"-->",chance,"\n                                       Chance:",chance)
+            if difficulty_mode == 1:
+                difficulty_print = "Easy"
+            elif difficulty_mode == 2:
+                difficulty_print = "Normal"
+            elif difficulty_mode == 3:
+                difficulty_print = "Difficult"
+            elif difficulty_mode == 4:
+                difficulty_print = "Impossible"
+            print ("\n\n<","-" * int(77 - (len(difficulty_print))),"Mode:",difficulty_print," | Level -",level,"-" * int(83 - (len(difficulty_print))),">\n"
+                     ," " * (81 - int((len("Random Number: ") / 2))),"Random Number: "
+                      ,lowest_number,"~",highest_number,"\n"
+                     ," " * (84 - int((len("Chance:") / 2))),"Chance: ",chance_last,"-->",chance)
+            print ("\n\n<","-" * int(77 - (len(difficulty_print))),"Mode:", difficulty_print
+                     ," | Level -",level,"-" * int(83 - (len(difficulty_print))),">\n"
+                     ," " * (81 - int((len("Random Number: ") / 2))),"Random Number: ", lowest_number, "~", highest_number
+                     ,"\n"," " * (84 - int((len("Chance:") / 2))),"Chance: ", chance)
             continue
         else:
             if guess > random_number:
                 if guess - random_number <= int((highest_number + 1) * 0.05 / level + level * random.randint(0,5)):
-                    print (random.choice(["\n                         It's very Close.       (your guess)A little higher.","\n                           (your guess is higher)Very Close."]))
+                    random_choice = random.randint(1,2)
+                    if random_choice ==1:
+                        print ("\n"," " * (87 - int((len("It's very Close.       (your guess)A little higher.") / 2))),"It's very Close.       (your guess)A little higher.")
+                    else:
+                        print ("\n"," " * (87 - int((len("(your guess is higher)Very Close.") / 2))),"(your guess is higher)Very Close.")
                 elif guess - random_number <= int((highest_number + 1) * 0.1 / level + level * random.randint(0,10)):
-                    print (random.choice(["\n                            Bit higher...        Your guess is higher.","\n                                     (your guess is higher)Close...."]))
+                    random_choice = random.randint (1,2)
+                    if random_choice == 1:
+                        print ("\n"," " * (87 - int((len("Bit higher...        Your guess is higher.") / 2))),"Bit higher...        Your guess is higher.")
+                    else:
+                        print ("\n"," " * (87 - int((len("(your guess is higher)Close....") / 2))),"(your guess is higher)Close....")
                 elif guess - random_number <= int((highest_number + 1) * 0.1):
-                    print ("\n                         (your guess)Some higher?         (High for 0~",int((highest_number + 1) * 0.1),")")
+                    print ("\n"," " * (87 - int((len("(your guess)Some higher?         (High for 0~...)") / 2))),"(your guess)Some higher?         (High for 0~",int((highest_number + 1) * 0.1),")")
                 else:
-                    print(random.choice(["\n                                  Your guess is higher.","\n                                  Your guess is not lower."]))
+                    random_choice = random.randint(1,2)
+                    if random_choice == 1:
+                        print ("\n"," " * (87 - int((len("Your guess is higher.") / 2))),"Your guess is higher.")
+                    else:
+                        print ("\n"," " * (87 - int((len("Your guess is not lower.") / 2))),"Your guess is not lower.")
             elif guess < random_number:
                 if random_number - guess <= int((highest_number + 1) * 0.05 / level + level * random.randint(0,5)):
-                    print(random.choice(["\n                         It's very Close.        A bit lower.(your guess)","\n                              Very Close.(your guess is lower)"]))
+                    random_choice = random.randint(1,2)
+                    if random_choice == 1:
+                        print("\n"," " * (87 - int((len("It's very Close.        A bit lower.(your guess)") / 2))),"It's very Close.        A bit lower.(your guess)")
+                    else:
+                        print ("\n"," " * (87 - int((len("Very Close.(your guess is lower)") / 2))),"Very Close.(your guess is lower)")
                 elif random_number -guess <= int((highest_number + 1) * 0.1 / level + level * random.randint(0,10)):
-                    print (random.choice(["\n                           Bit lower...        Your guess is lower.","\n                                   Close....(your guess is lower)"]))
+                    random_choice = random.randint(1,2)
+                    if random_choice == 1:
+                        print ("\n"," " * (87 - int((len("Bit lower...        Your guess is lower.") / 2))),"Bit lower...        Your guess is lower.")
+                    else:
+                        print ("\n"," " * (87 - int((len("Close....(your guess is lower)") / 2))),"Close....(your guess is lower)")
                 elif random_number - guess <= int((highest_number + 1) * 0.1):
-                    print ("\n              Some lower?(your guess)          (Low for 0~",int((highest_number + 1) * 0.1),")")
+                    print ("\n"," " * (87 - int((len("Some lower?(your guess)          (Low for 0~...)") / 2))),"Some lower?(your guess)          (Low for 0~",int((highest_number + 1) * 0.1),")")
                 else:
-                    print ("\n                                       It's higher.")
+                    print ("\n"," " * (87 - int((len("It's higher.") / 2))),"It's higher.")
         chance -= 1
         if chance < 1:
             break
         if chance >= level * 3:
-            print ("\n                                    You have",chance,"chance left.")
+            print ("\n"," " * (82 - int((len("You have") / 2))),"You have",chance,"chance left.")
         else:
-            print ("\n                                   You only have",chance,"chance left.")
+            print ("\n"," " * (80 - int((len("You only have") / 2))),"You only have",chance,"chance left.")
     if exit_game in ["no", "No"]:
         time.sleep(0.25)
-        print("\n                                          Ohh,no!")
+        print ("\n"," " * (87 - int((len("Ohh,no!") / 2))),"Ohh,no!")
         time.sleep(0.5)
-        print("\n                                       Chance over!")
+        print ("\n"," " * (87 - int((len("Chance over!") / 2))),"Chance over!")
     time.sleep(0.5)
-    print("\n\n<----------------------------------------Game Over---------------------------------------->\n\n")
-    if difficulty_mode == 4:
-        if level > 1:
-            print("\nWait..")
-            time.sleep(0.5)
-            print("You win Levels - ", level - 1, "in the Impossible!?")
-            time.sleep(0.5)
-            print(random.choice(["Wow!", "So Good!"]))
+    print ("\n\n<","-" * (87 - int((len("Game Start") / 2))),"Game Start","-" * (89 - int((len("Game Start") / 2))),">\n\n")
     if level > 1:
-        print('Your win levels is - ', level, "!")
+        if difficulty_mode == 4:
+            print ("\nWait..")
+            time.sleep(0.5)
+            print (" " * (80 - int((len("You win Levels - ") / 2))),"You win Levels - ", level - 1, "in the Impossible!?\n")
+            time.sleep(0.5)
+            random_choice = random.randint(1,2)
+            if random_choice == 1:
+                print (" " * (87 - int((len("Wow!") / 2))),"Wow!\n")
+            else:
+                print (" " * (87 - int((len("So Good!") / 2))),"So Good!\n")
+        print (" " * (87 - int((len("Your win levels is - ") / 2))),"Your win levels is - ", level, "!\n")
     time.sleep(0.5)
-    print('Thank you open my project!')
+    print (" " * (87 - int((len("Thank you open my project!") / 2))),"Thank you open my project!\n")
     time.sleep(0.5)
-    print('Please rest your eyes for 10 minutes.')
+    print (" " * (87 - int((len("Please rest your eyes for 10 minutes.") / 2))),"Please rest your eyes for 10 minutes.\n")
     time.sleep(0.5)
-    print('Bye~bye.: )')  # Bye: )
+    print (" " * (87 - int((len("Bye~bye.: )") / 2))),"Bye~bye.: )")  # Bye: )
     time.sleep(3)
-
-def difficulty_print():
-        if difficulty_mode == 1:
-            difficulty_print = "Easy"
-        elif difficulty_mode == 2:
-            difficulty_print = "Normal"
-        elif difficulty_mode == 3:
-            difficulty_print = "Difficult"
-        elif difficulty_mode == 4:
-            difficulty_print = "Impossible"
-
-def difficulty_convert_to_int():
-    if difficulty_mode in ["Easy", "easy"]:
-         difficulty_mode = 1
-    elif difficulty_mode in ["Normal", "normal"]:
-        difficulty_mode = 2
-    elif difficulty_mode in ["Difficult","difficult"]:
-        difficulty_mode = 3
-    elif difficulty_mode in ["Impossible","impossible"]:
-        difficulty_mode = 4
-    difficulty_mode = int(difficulty_mode)
-    difficulty_print()
 
 play_game()
