@@ -1,6 +1,6 @@
 # Guess Numbers: Impossible Difficulty
 
-> The file size is only about 17.9KB. 😀  
+> The file size is only about 17.8KB. 😀  
 > The code is quite verbose (I'm so sorry 😬) – it wastes space and unnecessary computational overhead. 😓  
 > I do not possess extensive coding expertise.  
 > **The program is fully functional (tested). 😉**
