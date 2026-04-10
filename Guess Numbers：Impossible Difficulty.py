@@ -1,4 +1,4 @@
-#The file size is only about 17.8KB.😀
+#The file size is only about 17.7KB.😀
 
 #I created this when I was √196 years old.🧐
 
@@ -23,8 +23,8 @@ def play_game():
                  ," " * (88 - int((len("Which code do you want?:" ) / 2))),end="")
         difficulty_mode = input("Which code do you want?: ")
         if str(difficulty_mode) not in ["1","Easy","easy","2","Normal","normal","3","Difficult","difficult","4","Impossible","impossible"]:
-            r = random.randint(1,2)
-            if r == 1:
+            random_choice = random.randint(1,2)
+            if random_choice == 1:
                 print ("\n"," " * (88 - int((len("Sorry,I can't understand. Please input again.") / 2))),"Sorry,I can't understand. Please input again.")
             else:
                 print ("\n"," " * (88 - int((len("???") / 2))),"???")
@@ -74,7 +74,7 @@ def play_game():
         chance -= random.randint(2,3)
     random_number = random.randint(lowest_number,highest_number)
     print ("\n\n<","-" * int(78 - (len(difficulty_print))),"Mode -",difficulty_print
-           ," | Level -",level,"-" * int(83 - (len(difficulty_print))),">\n"
+           ," | Level: ",level,"-" * int(83 - (len(difficulty_print))),">\n"
            ," " * (82 - int((len("Random Number: ") / 2))),"Random Number: ",lowest_number,"~",highest_number,"\n"
            ," " * (85 - int((len("Chance:") / 2))),"Chance: ",chance)
     while chance != 0:
@@ -174,10 +174,10 @@ def play_game():
                 range_size = highest_number - lowest_number + 1
                 chance = max(random.randint(1,2), int(range_size ** 0.2) + level // 3)
             time.sleep(0.25)
-            print ("\n\n<","-" * int(78 - (len(difficulty_print))),"Mode:",difficulty_print," | Level:",level - 1," - Cleared","-" * int(73 - (len(difficulty_print))),">\n")
+            print ("\n\n<","-" * int(78 - (len(difficulty_print))),"Mode:",difficulty_print," | Level: ",level - 1," - Cleared","-" * int(72 - (len(difficulty_print))),">\n")
             time.sleep(0.25)
-            random_choice = random.randint(0,1)
-            if random_choice == 0:
+            random_choice = random.randint(1,2)
+            if random_choice == 1:
                 print ("\n"," " * (88 - int((len("Let's proceed to the next' guess....") / 2))),"Let's proceed to the next' guess....")
             else:
                 print ("\n"," " * (87 - int((len("Level Up!") / 2))),"Level Up!")
@@ -198,7 +198,7 @@ def play_game():
                       ,lowest_number,"~",highest_number,"\n"
                      ," " * (85 - int((len("Chance:") / 2))),"Chance: ",chance_last,"-->",chance)
             print ("\n\n<","-" * int(78 - (len(difficulty_print))),"Mode:", difficulty_print
-                     ," | Level -",level,"-" * int(84 - (len(difficulty_print))),">\n"
+                     ," | Level: ",level,"-" * int(84 - (len(difficulty_print))),">\n"
                      ," " * (82 - int((len("Random Number: ") / 2))),"Random Number: ", lowest_number, "~", highest_number
                      ,"\n"," " * (85 - int((len("Chance:") / 2))),"Chance: ", chance)
             continue
