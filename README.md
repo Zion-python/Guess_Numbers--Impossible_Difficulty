@@ -1,6 +1,6 @@
-# Guess Numbers: Impossible Difficulty
+# Point to Fortune：Guess Number
 
-> The file size(Guess Numbers: Impossible Difficulty) is only about 17.8KB. 😀  
+> The file size(Point to Fortune：Guess Number) is only about 22.0KB. 😀  
 > The code is quite verbose (I'm so sorry 😬) – it wastes space and unnecessary computational overhead. 😓  
 > I do not possess extensive coding expertise.  
 > **The program is fully functional (tested). 😉**
@@ -13,9 +13,9 @@ This is a number‑guessing game with **progressively escalating difficulty**.
 I wrote the original version when I was 14 years old (√196 = 14).
 
 You guess a random number inside an **ever‑expanding numerical range**.  
-Each correct guess increases your **level**, expands the range (sometimes into negative numbers), and **recalculates your remaining chances**.
+Each correct guess increases your **level**, expands the range (sometimes into negative numbers), and **adds points to your score (e.g., 100,000 points per correct guess)**.
 
-> ⚠️ **Important**: The number of chances increases **slowly** – even on higher levels it is only theoretically sufficient.
+> ⚠️ **Important**: The score increases **slowly** – even on higher levels points are hard to accumulate.
 
 ---
 
@@ -33,7 +33,7 @@ Can you survive the **Impossible** mode?
 ## II. Core Features
 
 - **Dynamic Difficulty** – Higher difficulty makes the range expand much faster.  
-- **Level‑based Chance Recalculation** – Remaining attempts are recomputed each level based on current range size and level.  
+- **Level‑based Score Addition** – Points are added each level based on correct guesses.  
 - **Proximity Hints** – Tells you if your guess is very close, slightly high/low, or far off.  
 - **Random Encouraging Messages & Fun Trivia**  
 - **Loading Animation & Clear Game Rules**  
@@ -84,14 +84,14 @@ Follow the on‑screen prompts to select a difficulty level, then start guessing
 
 ### Difficulty Mode Breakdown
 
-| Mode       | Range Growth Factor        | Lower Bound Reduction | Chances Increase Rate |
-|------------|----------------------------|----------------------|------------------------|
-| Easy       | ×1.2 + 5                   | Slow, random         | Small & fast           |
-| Normal     | ×1.5 + 10                  | Gentle               | Normal                 |
-| Hard       | ×2 + 15                    | Rapid                | Very slow              |
-| Impossible | ×(2.5 + Level × 0.1)       | Swift                | Extremely slow         |
+| Mode       | Range Growth Factor        | Lower Bound Reduction | Score Increase Rate |
+|------------|----------------------------|----------------------|----------------------|
+| Easy       | ×1.2 + 5                   | Slow, random         | Small & fast         |
+| Normal     | ×1.5 + 10                  | Gentle               | Normal               |
+| Hard       | ×2 + 15                    | Rapid                | Very slow            |
+| Impossible | ×(2.5 + Level × 0.1)       | Swift                | Extremely slow       |
 
-> 📉 **Note**: The number of chances you get **does not increase quickly** – especially on Hard and Impossible modes, the growth is deliberately slow. Each level recalculates chances based on current range size and level; higher difficulties give you fewer attempts relative to the explosion of the number range.
+> 📉 **Note**: The score you get **does not increase quickly** – especially on Hard and Impossible modes, the growth is deliberately slow. Each level adds points based on current range size and level; higher difficulties give you fewer points relative to the explosion of the number range.
 
 ---
 
@@ -130,6 +130,3 @@ You are encouraged to share your improved version with your friends!
 ---
 
 *Made with by a 14‑year‑old. Keep guessing, keep learning.
-
-
-# This article was largely compiled and optimized by deepseek from the original version (which I wrote) and generated.
