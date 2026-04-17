@@ -1,6 +1,6 @@
 # Point to Fortune：Guess Number
 
-> The file size(Point to Fortune：Guess Number) is only about 22.0KB. 😀  
+> The file size (Point to Fortune：Guess Number) is only about 23.1KB. 😀  
 > The code is quite verbose (I'm so sorry 😬) – it wastes space and unnecessary computational overhead. 😓  
 > I do not possess extensive coding expertise.  
 > **The program is fully functional (tested). 😉**
@@ -118,7 +118,7 @@ Follow the on‑screen prompts to select a difficulty level, then start guessing
 The original concept and code were created by me when I was **“√196 years old”** (14).  
 
 Today, with the help of the open‑source community, this project continues to be maintained and improved.  
-Special thanks to **DeepSeek** for its rigorous review and suggestions – more than 80% of which were subsequently edited by me (so any remaining mistakes are entirely my own 😅).
+**Special thanks to DeepSeek** – over **85%** of the code refinements, bug fixes, and formatting improvements were guided by DeepSeek's thorough review and suggestions. The remaining 15% represents my own tweaks and personal touches. (Any lingering issues are, of course, my responsibility.)
 
 ---
 
@@ -129,4 +129,4 @@ You are encouraged to share your improved version with your friends!
 
 ---
 
-*Made with by a 14‑year‑old. Keep guessing, keep learning.
+*Made with ❤️ by a 14‑year‑old. Keep guessing, keep learning.*
