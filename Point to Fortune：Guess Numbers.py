@@ -1,4 +1,4 @@
-#The file size is only about 22.0KB.😀
+#The file size is only about 23.1KB.😀
 
 #I created this when I was √196 years old.🧐
 
@@ -256,8 +256,9 @@ def play_game():
                         print("\n"," "*(88-int((len("(your guess is higher)Very Close.")/2))),"(your guess is higher)Very Close.")
                     score_deduct_points=int((guess-random_number)*(100+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 elif guess-random_number<=int((highest_number+1)*0.1/level+level*random.randint(0,10)):
                     random_choice=random.randint(1,2)
                     if random_choice==1:
@@ -266,24 +267,27 @@ def play_game():
                         print("\n"," "*(88-int((len("(your guess is higher)Close....")/2))),"(your guess is higher)Close....")
                     score_deduct_points=int((guess-random_number)*(50+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 elif guess-random_number<=int((highest_number+1)*0.1):
                     print("\n"," "*(88-int((len("(your guess)Some higher?         (High for 0~...)")/2))),"(your guess)Some higher?         (High for 0~",int((highest_number+1)*0.1),")")
                     score_deduct_points=int((guess-random_number)*(20+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 else:
                     random_choice=random.randint(1,2)
                     if random_choice==1:
-                        print("\n"," "*(88-int((len("Your guess is higher.")/2))),"Your guess is higher.")
+                        print("\n","\n"," "*(88-int((len("Your guess is higher.")/2))),"Your guess is higher.")
                     else:
-                        print("\n"," "*(88-int((len("Your guess is not lower.")/2))),"Your guess is not lower.")
+                        print("\n","\n"," "*(88-int((len("Your guess is not lower.")/2))),"Your guess is not lower.")
                     score_deduct_points=int((guess-random_number)*(40+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score ")/2))),"Score  ",format_score(score_deduct_points))
                     score-=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
             elif guess<random_number:
                 if random_number-guess<=int((highest_number+1)*0.05/level+level*random.randint(0,5)):
                     random_choice=random.randint(1,2)
@@ -293,8 +297,9 @@ def play_game():
                         print("\n"," "*(88-int((len("Very Close.(your guess is lower)")/2))),"Very Close.(your guess is lower)")
                     score_deduct_points=int((guess-random_number)*(100+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 elif random_number-guess<=int((highest_number+1)*0.1/level+level*random.randint(0,10)):
                     random_choice=random.randint(1,2)
                     if random_choice==1:
@@ -303,35 +308,43 @@ def play_game():
                         print("\n"," "*(88-int((len("Close....(your guess is lower)")/2))),"Close....(your guess is lower)")
                     score_deduct_points=int((guess-random_number)*(50+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 elif random_number-guess<=int((highest_number+1)*0.1):
                     print("\n"," "*(88-int((len("Some lower?(your guess)          (Low for 0~...)")/2))),"Some lower?(your guess)          (Low for 0~",int((highest_number+1)*0.1),")")
                     score_deduct_points=int((guess-random_number)*(20+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  +",f"{score_deduct_points}")
+                    print("\n"," "*(88-int((len("Score +")/2))),"Score  +",format_score(score_deduct_points))
                     score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
                 else:
-                    score_deduct_points=int((guess-random_number)*(40+level*random.randint(1,10)/max(1,level*10-10)))
+                    random_choice=random.randint(1,2)
+                    if random_choice==1:
+                        print("\n"," "*(88-int((len("Your guess is lower.")/2))),"Your guess is lower.")
+                    else:
+                        print("\n"," "*(88-int((len("Your guess is not higher.")/2))),"Your guess is not higher.")
+                    score_deduct_points=int((guess-random_number)*(10+level*random.randint(1,10)/max(1,level*10-10)))
                     time.sleep(0.05)
-                    print(" "*(88-int((len("Score +")/2))),"Score  -",f"{score_deduct_points}")
-                    score-=score_deduct_points
+                    print("\n"," "*(88-int((len("Score ")/2))),"Score  ",format_score(score_deduct_points))
+                    score+=score_deduct_points
+                    print("\n"," "*(80-int((len("Current Score:")/2))),"Current Score:",format_score(score))
         chance-=1
         time.sleep(0.1)
-        if chance<1 or score<-1000:
+        if chance<1 or score<0:
             break
         if chance>=level*3:
-            print("\n"," "*(88-int((len("You have")/2))),"You have: ",chance,"chance left.")
+            print("\n"," "*(88-int((len("You have  chance left")/2))),"You have: ",chance,"chance left.")
         else:
-            print("\n"," "*(88-int((len("You only have")/2))),"You only have",chance,"chance left.")
+            print("\n"," "*(88-int((len("You only have  chance left")/2))),"You only have",chance,"chance left.")
         if 1000000-score>500000:
-            print("\n"," " * (88 - int((len("You are points away from winning.") / 2))),"You are",1000000-score,"points away from winning.")
+            print("\n"," " * (84 - int((len("You are points away from winning.") / 2))),"You are",1000000-score,"points away from winning.")
         else:
-            print("\n"," " * (88 - int((len("You are only points away from victory.") / 2))),"You are only",1000000-score,"points away from winning.")
+            print("\n\n"," " * (84 - int((len("You are only points away from winning.") / 2))),"You are only",1000000-score,"points away from winning.")
     time.sleep(0.1)
     if score>=1000000:
         print("\n"," " * (81 - int((len("You successfully reached 1,000,000 points and you win!") / 2))),"You successfully reached 1,000,000 points and you win!")
-    elif score>=-1000:
+    elif score>=0:
         print("\n"," " * (81 - int((len("Oh, so close! You almost made it to 1,000,000 points.") / 2))),"Oh, so close! You almost made it to 1,000,000 points.")
         time.sleep(0.1)
         print("\n"," " * (88 - int((len("Your final score is: ") / 2))),"Your final score is: ",format_score(score))
